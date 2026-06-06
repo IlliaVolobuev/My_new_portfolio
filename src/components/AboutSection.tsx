@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Code2, Lightbulb, Rocket } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, title: "Clean Code", desc: "Writing readable and maintainable code" },
-  { icon: Lightbulb, title: "Problem Solver", desc: "Finding practical solutions through programming" },
-  { icon: GraduationCap, title: "Technical Education", desc: "Computer Science Technician Student" },
-  { icon: Rocket, title: "Continuous Learning", desc: "Always improving and learning new technologies" },
+  { icon: Code2, title: "Clean Code", desc: "Writing readable, maintainable and scalable code." },
+  { icon: Lightbulb, title: "Problem Solver", desc: "Finding practical solutions through programming and logical thinking." },
+  { icon: GraduationCap, title: "Technical Education", desc: "Computer Science Technician student with hands-on experience." },
+  { icon: Rocket, title: "Continuous Learning", desc: "Always learning new technologies and improving existing skills." },
 ];
 
 const AboutSection = () => (
@@ -38,9 +38,9 @@ const AboutSection = () => (
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
             I started learning programming in 2021 at the School of Computer Mastery,
-            where I worked on multiple practical projects and built a solid foundation in
-            HTML, CSS and JavaScript. Since then, I have continued expanding my skills by
-            learning modern frameworks, backend development and databases.
+            where I worked on numerous practical projects and developed a solid foundation
+            in HTML, CSS and JavaScript. Since then, I have continued expanding my
+            knowledge through self-study, technical education and personal projects.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             My goal is to become a professional Full Stack Developer and contribute to

@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     title: "Drink2Go",
-    desc: "Coffee shop website developed as a final project featuring responsive design, product catalog and modern UI.",
+    desc: "Final educational project of an online coffee shop featuring responsive design, product catalog, filtering and modern UI.",
     tags: ["HTML", "SCSS", "JavaScript"],
   },
   {
@@ -14,17 +14,22 @@ const projects = [
   },
   {
     title: "Task Manager",
-    desc: "Web application for managing daily tasks with CRUD functionality and local data storage.",
-    tags: ["JavaScript", "React", "Node.js"],
+    desc: "Web application for managing daily tasks with CRUD functionality and clean user interface.",
+    tags: ["React", "JavaScript", "Node.js"],
   },
   {
-    title: "School Projects",
-    desc: "Various educational projects completed during Computer Science studies and programming courses.",
+    title: "LAN Network Design",
+    desc: "Network planning and infrastructure project created during Computer Science studies.",
+    tags: ["Networking", "Cisco", "LAN"],
+  },
+  {
+    title: "School Projects Collection",
+    desc: "Collection of educational projects completed during technical school and programming courses.",
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "GitHub Projects",
-    desc: "Collection of personal experiments and learning projects available on GitHub.",
+    desc: "Collection of personal experiments, learning projects and open-source contributions available on GitHub.",
     tags: ["React", "Node.js", "MongoDB"],
   },
 ];

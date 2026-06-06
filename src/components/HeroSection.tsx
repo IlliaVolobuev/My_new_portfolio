@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const profileImg = "../../public/Illia.jpg";
 
-const roles = ["Junior Frontend & Full Stack Developer"];
+const roles = ["Junior Frontend Developer"];
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -34,8 +34,8 @@ const HeroSection = () => {
 
   const techStack = [
     { icon: Code2, label: "React" },
-    { icon: Braces, label: "JavaScript" },
     { icon: FileCode2, label: "TypeScript" },
+    { icon: Braces, label: "JavaScript" },
     { icon: Server, label: "Node.js" },
   ];
 
@@ -119,12 +119,14 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-muted-foreground text-base md:text-lg max-w-lg mb-8 leading-relaxed"
             >
-              Passionate about creating modern web applications using{" "}
+              Computer Science student passionate about building modern, responsive and
+              user-friendly web applications. Experienced with{" "}
               <span className="text-foreground font-medium">
-                React, JavaScript, TypeScript, Node.js
+                React, TypeScript, JavaScript
               </span>{" "}
-              and modern web technologies. Currently studying Computer Science and building
-              practical projects to improve my skills every day.
+              and modern development tools. Currently looking for internship and junior
+              opportunities to gain professional experience and contribute to real-world
+              projects.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -159,7 +161,7 @@ const HeroSection = () => {
             >
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-medium">Tech Stack</span>
               <div className="h-px flex-1 max-w-[40px] bg-border" />
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {techStack.map((t, i) => (
                   <motion.div
                     key={t.label}
@@ -184,8 +186,8 @@ const HeroSection = () => {
             >
               {[
                 { num: "15+", label: "Personal Projects" },
-                { num: "10+", label: "Technologies Learned" },
-                { num: "2027", label: "Computer Science Technician Graduate" },
+                { num: "5+", label: "Years Learning Programming" },
+                { num: "2027", label: "Expected Graduation" },
               ].map((s, i) => (
                 <div key={s.label} className="relative">
                   {i > 0 && (
@@ -253,8 +255,8 @@ const HeroSection = () => {
                     <Rocket size={14} className="text-primary-foreground" />
                   </div>
                   <div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Web Technologies</div>
-                    <div className="font-display font-bold text-sm text-foreground">React & JavaScript</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Modern Web Technologies</div>
+                    <div className="font-display font-bold text-sm text-foreground">React & TypeScript</div>
                   </div>
                 </div>
               </motion.div>

@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
 
-const skills = [
-  { name: "HTML5", level: 95 },
-  { name: "CSS3 / SCSS", level: 90 },
-  { name: "JavaScript (ES6+)", level: 88 },
-  { name: "TypeScript", level: 80 },
-  { name: "React", level: 85 },
-  { name: "Next.js", level: 75 },
-  { name: "Node.js", level: 75 },
-  { name: "Express.js", level: 70 },
-  { name: "MongoDB", level: 70 },
-  { name: "PostgreSQL", level: 65 },
-  { name: "Git & GitHub", level: 85 },
-  { name: "Linux Administration", level: 75 },
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: ["HTML5", "CSS3", "SCSS", "Tailwind CSS", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Vite"],
+  },
+  {
+    title: "Backend",
+    skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "GitHub", "Linux", "VS Code", "REST API"],
+  },
+  {
+    title: "Server Administration",
+    skills: ["Ubuntu Server", "SSH", "Apache", "Nginx", "Bind9 DNS", "DHCP", "Samba"],
+  },
 ];
 
 const SkillsSection = () => (
@@ -28,27 +32,26 @@ const SkillsSection = () => (
         <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 text-foreground">Technologies & Tools</h2>
       </motion.div>
 
-      <div className="max-w-3xl mx-auto space-y-6">
-        {skills.map((skill, i) => (
+      <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {skillGroups.map((group, i) => (
           <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            key={group.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
+            transition={{ delay: i * 0.08 }}
+            className="bg-card rounded-2xl p-6 shadow-card border border-border"
           >
-            <div className="flex justify-between mb-2">
-              <span className="font-medium text-sm text-foreground">{skill.name}</span>
-              <span className="text-muted-foreground text-sm">{skill.level}%</span>
-            </div>
-            <div className="h-3 rounded-full bg-card shadow-soft border border-border overflow-hidden">
-              <motion.div
-                className="h-full rounded-full gradient-primary"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${skill.level}%` }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: i * 0.05 }}
-              />
+            <h3 className="font-display text-xl font-bold mb-4 text-foreground">{group.title}</h3>
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-sm px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground border border-border"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </motion.div>
         ))}

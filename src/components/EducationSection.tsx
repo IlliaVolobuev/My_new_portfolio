@@ -4,21 +4,21 @@ import { BookOpen, Calendar, GraduationCap } from "lucide-react";
 const educationItems = [
   {
     icon: GraduationCap,
-    title: "Computer Science Technician Student",
-    meta: "Expected graduation: 2027",
-    desc: "Studying Computer Science with a focus on programming, web technologies, databases and practical software development.",
+    title: "Zespół Szkół Łączności w Gdańsku",
+    meta: "Computer Science Technician Program - Expected Graduation: 2027",
+    desc: "Studying programming, databases, networking, operating systems and software development.",
   },
   {
     icon: BookOpen,
-    title: "School of Computer Mastery",
-    meta: "Started programming in 2021",
-    desc: "Built a solid foundation in HTML, CSS and JavaScript through practical projects and programming courses.",
+    title: "School of Computer Mastery (SHKM)",
+    meta: "2021 – 2025",
+    desc: "Completed programming courses and worked on numerous practical web development projects.",
   },
   {
     icon: Calendar,
-    title: "Continuous Practice",
-    meta: "Personal projects and learning",
-    desc: "Expanding my skills with React, TypeScript, Node.js, backend development, databases and modern development tools.",
+    title: "Continuous Learning",
+    meta: "Modern web development",
+    desc: "Actively improving skills in React, TypeScript, Node.js, databases, Linux administration and modern web development.",
   },
 ];
 

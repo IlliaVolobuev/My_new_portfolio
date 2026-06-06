@@ -10,12 +10,12 @@ const services = [
   {
     icon: Globe,
     title: "Web Application Development",
-    desc: "Building full-stack applications with modern technologies and REST APIs.",
+    desc: "Building full-stack applications with modern technologies, databases and REST APIs.",
   },
   {
     icon: Rocket,
-    title: "Website Maintenance",
-    desc: "Improving, updating and optimizing existing websites for better performance and user experience.",
+    title: "Website Optimization",
+    desc: "Improving performance, accessibility and user experience of existing websites.",
   },
 ];
 
@@ -28,8 +28,8 @@ const ServicesSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="text-primary font-semibold text-sm uppercase tracking-wider">What I Do</span>
-        <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 text-foreground">My Services</h2>
+        <span className="text-primary font-semibold text-sm uppercase tracking-wider">Services</span>
+        <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 text-foreground">What I Can Do</h2>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">
