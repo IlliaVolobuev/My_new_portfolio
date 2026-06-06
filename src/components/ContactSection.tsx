@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
-import { Send, ExternalLink, Mail, User, MessageSquare } from "lucide-react";
+import { Github, Linkedin, Mail, MessageSquare, Send, User } from "lucide-react";
 import { useState, FormEvent } from "react";
+
+const contactLinks = [
+  { icon: Github, label: "GitHub", href: "https://github.com/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/" },
+  { icon: Mail, label: "Email", href: "mailto:contact@illiavolobuiev.dev" },
+];
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -30,21 +36,27 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-display text-2xl font-bold mb-4 text-foreground">Let's work together</h3>
+            <h3 className="font-display text-2xl font-bold mb-4 text-foreground">Let's build something together</h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I'm available for freelance work and open to discussing new projects.
-              Feel free to reach out through the form or connect on Fiverr.
+              I am currently looking for internship opportunities, junior developer
+              positions and exciting projects where I can gain experience and continue
+              growing as a developer.
             </p>
 
-            <a
-              href="https://www.fiverr.com/s/EgzY4zy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 gradient-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-soft"
-            >
-              <ExternalLink size={18} />
-              Hire Me on Fiverr
-            </a>
+            <div className="flex flex-wrap gap-3">
+              {contactLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                  className="inline-flex items-center gap-2 gradient-primary text-primary-foreground px-5 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-soft"
+                >
+                  <link.icon size={18} />
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </motion.div>
 
           <motion.form

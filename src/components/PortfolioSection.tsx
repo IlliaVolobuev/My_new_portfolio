@@ -3,39 +3,34 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    desc: "Full-featured online store built with MERN stack featuring product management, cart, and payment integration.",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-  },
-  {
-    title: "Task Management App",
-    desc: "A productivity app with authentication, CRUD operations, and real-time updates deployed on Vercel.",
-    tags: ["React", "Express", "MongoDB", "Vercel"],
+    title: "Drink2Go",
+    desc: "Coffee shop website developed as a final project featuring responsive design, product catalog and modern UI.",
+    tags: ["HTML", "SCSS", "JavaScript"],
   },
   {
     title: "Portfolio Website",
-    desc: "Modern responsive portfolio with smooth animations and clean UI, hosted on GitHub Pages.",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    desc: "Personal portfolio website showcasing my skills, projects and development journey.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Blog Platform",
-    desc: "Full stack blogging platform with markdown support, user auth, and dynamic content management.",
-    tags: ["MERN Stack", "JWT", "Heroku"],
+    title: "Task Manager",
+    desc: "Web application for managing daily tasks with CRUD functionality and local data storage.",
+    tags: ["JavaScript", "React", "Node.js"],
   },
   {
-    title: "Weather Dashboard",
-    desc: "Real-time weather application with location search, forecasts, and beautiful data visualization.",
-    tags: ["React", "API Integration", "Vercel"],
+    title: "School Projects",
+    desc: "Various educational projects completed during Computer Science studies and programming courses.",
+    tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Chat Application",
-    desc: "Real-time messaging app with socket connections, user presence indicators, and message history.",
-    tags: ["Node.js", "Socket.io", "React", "MongoDB"],
+    title: "GitHub Projects",
+    desc: "Collection of personal experiments and learning projects available on GitHub.",
+    tags: ["React", "Node.js", "MongoDB"],
   },
 ];
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="py-24 bg-secondary/50">
+  <section id="projects" className="py-24 bg-secondary/50">
     <div className="container mx-auto px-4 md:px-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

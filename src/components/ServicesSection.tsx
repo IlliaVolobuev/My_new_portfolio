@@ -4,18 +4,18 @@ import { Code2, Globe, Rocket } from "lucide-react";
 const services = [
   {
     icon: Code2,
-    title: "MERN Stack Development",
-    desc: "Building robust, full-featured web applications using MongoDB, Express, React, and Node.js with clean architecture and best practices.",
+    title: "Frontend Development",
+    desc: "Creating responsive, modern and user-friendly websites using HTML, CSS, JavaScript, React and Next.js.",
   },
   {
     icon: Globe,
-    title: "Full Stack Solutions",
-    desc: "End-to-end web development from responsive front-ends to secure back-end APIs, delivering complete, production-ready applications.",
+    title: "Web Application Development",
+    desc: "Building full-stack applications with modern technologies and REST APIs.",
   },
   {
     icon: Rocket,
-    title: "Deployment & Hosting",
-    desc: "Seamless deployment and hosting of web applications on Vercel, GitHub Pages, and Heroku with CI/CD pipelines and optimized performance.",
+    title: "Website Maintenance",
+    desc: "Improving, updating and optimizing existing websites for better performance and user experience.",
   },
 ];
 

@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React.js", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "Express.js", level: 85 },
-  { name: "MongoDB", level: 80 },
-  { name: "JavaScript / TypeScript", level: 88 },
-  { name: "HTML / CSS / Tailwind", level: 92 },
+  { name: "HTML5", level: 95 },
+  { name: "CSS3 / SCSS", level: 90 },
+  { name: "JavaScript (ES6+)", level: 88 },
+  { name: "TypeScript", level: 80 },
+  { name: "React", level: 85 },
+  { name: "Next.js", level: 75 },
+  { name: "Node.js", level: 75 },
+  { name: "Express.js", level: 70 },
+  { name: "MongoDB", level: 70 },
+  { name: "PostgreSQL", level: 65 },
   { name: "Git & GitHub", level: 85 },
-  { name: "Deployment (Vercel/Heroku)", level: 80 },
+  { name: "Linux Administration", level: 75 },
 ];
 
 const SkillsSection = () => (
@@ -21,7 +25,7 @@ const SkillsSection = () => (
         className="text-center mb-16"
       >
         <span className="text-primary font-semibold text-sm uppercase tracking-wider">My Skills</span>
-        <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 text-foreground">Tech Stack & Expertise</h2>
+        <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 text-foreground">Technologies & Tools</h2>
       </motion.div>
 
       <div className="max-w-3xl mx-auto space-y-6">

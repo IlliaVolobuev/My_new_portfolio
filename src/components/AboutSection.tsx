@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Code2, Lightbulb, Rocket } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, title: "Clean Code", desc: "Writing maintainable, scalable code" },
-  { icon: Lightbulb, title: "Problem Solver", desc: "Analytical approach to challenges" },
-  { icon: GraduationCap, title: "CS Graduate", desc: "Bachelor's in Computer Science, Fall 2024" },
-  { icon: Rocket, title: "Continuous Learner", desc: "Always exploring new technologies" },
+  { icon: Code2, title: "Clean Code", desc: "Writing readable and maintainable code" },
+  { icon: Lightbulb, title: "Problem Solver", desc: "Finding practical solutions through programming" },
+  { icon: GraduationCap, title: "Technical Education", desc: "Computer Science Technician Student" },
+  { icon: Rocket, title: "Continuous Learning", desc: "Always improving and learning new technologies" },
 ];
 
 const AboutSection = () => (
@@ -30,18 +30,22 @@ const AboutSection = () => (
           transition={{ duration: 0.6 }}
         >
           <h3 className="font-display text-2xl font-bold mb-4 text-foreground">
-            A dedicated <span className="text-gradient">Full Stack Developer</span>
+            A passionate <span className="text-gradient">Junior Web Developer</span>
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            I'm Illia Volobuiev, a passionate MERN Stack and Full Stack Developer with a
-            Bachelor's degree in Computer Science (Fall 2024). I specialize in developing
-            and deploying web applications using modern technologies with a strong focus on
-            usability, performance, and clean design.
+            I'm Illia Volobuiev, a Computer Science student from Poland with a strong
+            interest in web development and modern technologies.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            I started learning programming in 2021 at the School of Computer Mastery,
+            where I worked on multiple practical projects and built a solid foundation in
+            HTML, CSS and JavaScript. Since then, I have continued expanding my skills by
+            learning modern frameworks, backend development and databases.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            My journey in web development is fueled by a genuine love for coding and
-            problem-solving. I continuously learn and adapt to new technologies to deliver
-            high-quality, production-ready applications that make a real impact.
+            My goal is to become a professional Full Stack Developer and contribute to
+            meaningful projects while continuously improving my technical and
+            problem-solving abilities.
           </p>
         </motion.div>
 

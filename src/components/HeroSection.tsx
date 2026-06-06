@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ExternalLink, Sparkles, Code2, Server, Rocket } from "lucide-react";
+import { ArrowDown, Braces, ExternalLink, FileCode2, Sparkles, Code2, Server, Rocket } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const profileImg = "../../public/Illia.jpg";
 
-const roles = ["MERN Stack Developer", "Full Stack Developer", "Web App Architect"];
+const roles = ["Junior Frontend & Full Stack Developer"];
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -34,8 +34,9 @@ const HeroSection = () => {
 
   const techStack = [
     { icon: Code2, label: "React" },
+    { icon: Braces, label: "JavaScript" },
+    { icon: FileCode2, label: "TypeScript" },
     { icon: Server, label: "Node.js" },
-    { icon: Rocket, label: "MongoDB" },
   ];
 
   return (
@@ -78,7 +79,7 @@ const HeroSection = () => {
               className="flex items-center gap-2 mb-6"
             >
               <span className="inline-flex items-center gap-2 gradient-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase shadow-soft">
-                <Sparkles size={12} /> Available for Hire
+                <Sparkles size={12} /> Available for Internship & Junior Positions
               </span>
             </motion.div>
 
@@ -118,9 +119,12 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-muted-foreground text-base md:text-lg max-w-lg mb-8 leading-relaxed"
             >
-              Specializing in building and deploying scalable web applications using{" "}
-              <span className="text-foreground font-medium">React, Node.js, MongoDB & Express</span>.
-              Delivering polished products on Vercel, GitHub & Heroku.
+              Passionate about creating modern web applications using{" "}
+              <span className="text-foreground font-medium">
+                React, JavaScript, TypeScript, Node.js
+              </span>{" "}
+              and modern web technologies. Currently studying Computer Science and building
+              practical projects to improve my skills every day.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -131,10 +135,10 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4 mb-12"
             >
               <a
-                href="#portfolio"
+                href="#projects"
                 className="group gradient-primary text-primary-foreground px-8 py-3.5 rounded-xl font-semibold hover:shadow-hover transition-all duration-300 flex items-center gap-2 shadow-soft"
               >
-                View Portfolio
+                View Projects
                 <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
               </a>
               <a
@@ -179,9 +183,9 @@ const HeroSection = () => {
               className="flex gap-8 md:gap-12"
             >
               {[
-                { num: "100+", label: "Projects Completed" },
-                { num: "7+", label: "Technologies Used" },
-                { num: "2024", label: "CS Graduate" },
+                { num: "15+", label: "Personal Projects" },
+                { num: "10+", label: "Technologies Learned" },
+                { num: "2027", label: "Computer Science Technician Graduate" },
               ].map((s, i) => (
                 <div key={s.label} className="relative">
                   {i > 0 && (
@@ -233,7 +237,7 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Specializing in</div>
-                    <div className="font-display font-bold text-sm text-foreground">MERN Stack</div>
+                    <div className="font-display font-bold text-sm text-foreground">Frontend Development</div>
                   </div>
                 </div>
               </motion.div>
@@ -249,8 +253,8 @@ const HeroSection = () => {
                     <Rocket size={14} className="text-primary-foreground" />
                   </div>
                   <div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Deployment</div>
-                    <div className="font-display font-bold text-sm text-foreground">Vercel & GitHub</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Web Technologies</div>
+                    <div className="font-display font-bold text-sm text-foreground">React & JavaScript</div>
                   </div>
                 </div>
               </motion.div>

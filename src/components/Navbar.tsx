@@ -6,8 +6,8 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -46,7 +46,7 @@ const Navbar = () => {
             href="#contact"
             className="gradient-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity shadow-soft"
           >
-            Hire Me
+            Contact
           </a>
         </div>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="gradient-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold text-center"
               >
-                Hire Me
+                Contact
               </a>
             </div>
           </motion.div>
