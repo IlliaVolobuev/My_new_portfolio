@@ -1,38 +1,94 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Drink2Go",
-    desc: "Final educational project of an online coffee shop featuring responsive design, product catalog, filtering and modern UI.",
-    tags: ["HTML", "SCSS", "JavaScript"],
+    image: "Site_Nelly-s-Saloon.png",
+    title: "Nelly's Saloon",
+    desc: "Responsive salon website with a clean visual style, service presentation and polished landing page layout.",
+    tags: ["Creative", "Web Design", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/Site_Nelly-s-Saloon/",
   },
   {
-    title: "Portfolio Website",
-    desc: "Personal portfolio website showcasing my skills, projects and development journey.",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
+    image: "Site_krist-shop.png",
+    title: "Krist Shop",
+    desc: "Shop website project focused on product presentation, branding and a clear user experience.",
+    tags: ["Branding"],
+    url: "https://github.com/AleksandrVolobuev/Site_krist-shop",
   },
   {
-    title: "Task Manager",
-    desc: "Web application for managing daily tasks with CRUD functionality and clean user interface.",
-    tags: ["React", "JavaScript", "Node.js"],
+    image: "Site_Bond_construction.png",
+    title: "Bond Construction",
+    desc: "Construction company website with responsive sections, strong visuals and service-focused content.",
+    tags: ["Web Design", "Creative", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/Site_Bond_construction/",
   },
   {
-    title: "LAN Network Design",
-    desc: "Network planning and infrastructure project created during Computer Science studies.",
-    tags: ["Networking", "Cisco", "LAN"],
+    image: "Site_Bombay_Luxury.png",
+    title: "Bombay Luxury",
+    desc: "Luxury-styled landing page project with elegant presentation and brand-focused UI.",
+    tags: ["Branding", "Creative"],
+    url: "https://aleksandrvolobuev.github.io/Site_Bombay_Luxury/",
   },
   {
-    title: "School Projects Collection",
-    desc: "Collection of educational projects completed during technical school and programming courses.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    image: "Site_about_mountains.png",
+    title: "About Mountains",
+    desc: "Travel and nature themed website with responsive layout, visual storytelling and modern sections.",
+    tags: ["Web Design", "Branding", "Creative"],
+    url: "https://aleksandrvolobuev.github.io/Site_about_mountains/",
   },
   {
-    title: "GitHub Projects",
-    desc: "Collection of personal experiments, learning projects and open-source contributions available on GitHub.",
-    tags: ["React", "Node.js", "MongoDB"],
+    image: "SHOP_COFE.png",
+    title: "Coffee Shop",
+    desc: "Online coffee shop project with product presentation, modern interface and responsive design.",
+    tags: ["Web Design", "Creative", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/SHOP_COFE/",
+  },
+  {
+    image: "nuxt_vue.png",
+    title: "Nuxt Vue Project",
+    desc: "Vue and Nuxt based website experiment focused on component structure and modern frontend workflow.",
+    tags: ["Creative", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/nuxt_vue/",
+  },
+  {
+    image: "Psychologist-Svetlana-Prudnik.png",
+    title: "Psychologist Website",
+    desc: "Professional psychologist website with calm visual design, service information and responsive pages.",
+    tags: ["Web Design", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/Psychologist-Svetlana-Prudnik/",
+  },
+  {
+    image: "mersedes.png",
+    title: "Mercedes Project",
+    desc: "Automotive themed website concept with clean layout, product visuals and responsive presentation.",
+    tags: ["Web Design"],
+    url: "https://aleksandrvolobuev.github.io/mersedes/",
+  },
+  {
+    image: "karaokel-project.png",
+    title: "Karaoke Project",
+    desc: "Entertainment website project with a bold visual style and event-focused page structure.",
+    tags: ["Web Design", "Branding"],
+    url: "https://aleksandrvolobuev.github.io/karaokel-project/",
+  },
+  {
+    image: "game_Snake.png",
+    title: "Snake Game",
+    desc: "Classic Snake browser game built as an interactive JavaScript practice project.",
+    tags: ["Web Design", "JavaScript", "Game"],
+    url: "https://aleksandrvolobuev.github.io/game_Snake/",
+  },
+  {
+    image: "game_BlackJack.png",
+    title: "BlackJack Game",
+    desc: "Browser card game project focused on JavaScript logic, interactions and simple game flow.",
+    tags: ["Web Design", "JavaScript", "Game"],
+    url: "https://aleksandrvolobuev.github.io/game_BlackJack/",
   },
 ];
+
+const getProjectImage = (image: string) => `${import.meta.env.BASE_URL}${image}`;
 
 const PortfolioSection = () => (
   <section id="projects" className="py-24 bg-secondary/50">
@@ -58,6 +114,14 @@ const PortfolioSection = () => (
             className="bg-card rounded-2xl overflow-hidden shadow-card border border-border hover:shadow-hover transition-all duration-300 group"
           >
             <div className="h-2 gradient-primary" />
+            <a href={p.url} target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
+              <img
+                src={getProjectImage(p.image)}
+                alt={`${p.title} project preview`}
+                className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </a>
             <div className="p-6">
               <h3 className="font-display text-lg font-bold mb-2 text-foreground">{p.title}</h3>
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{p.desc}</p>
@@ -69,12 +133,14 @@ const PortfolioSection = () => (
                 ))}
               </div>
               <div className="flex gap-3">
-                <button className="flex items-center gap-1.5 text-sm text-primary hover:underline font-medium">
-                  <ExternalLink size={14} /> Live Demo
-                </button>
-                <button className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
-                  <Github size={14} /> Source
-                </button>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm text-primary hover:underline font-medium"
+                >
+                  <ExternalLink size={14} /> Open Project
+                </a>
               </div>
             </div>
           </motion.div>
